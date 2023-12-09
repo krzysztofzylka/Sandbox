@@ -1,0 +1,23 @@
+{
+    "name": "krzysztofzylka/sandbox",
+    "description": "Sandbox library",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Krzysztofzylka\\Sandbox\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Krzysztof Żyłka",
+            "email": "krzysztofzylka@yahoo.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=8.2",
+        "krzysztofzylka/generator": "^1.0.0",
+        "krzysztofzylka/file": "^1.0.0"
+    }
+}
