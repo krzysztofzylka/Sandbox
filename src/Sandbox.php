@@ -52,7 +52,8 @@ class Sandbox
      * @param ?string $code
      * @throws Exception
      */
-    public function __construct(?string $phpFilePath, ?string $code = null) {
+    public function __construct(?string $phpFilePath, ?string $code = null)
+    {
         if (!is_null($phpFilePath) && !file_exists($phpFilePath)) {
             throw new Exception('Provided PHP file does not exist');
         }
@@ -75,7 +76,8 @@ class Sandbox
      * @param int $timeLimit
      * @return $this
      */
-    public function setTimeLimit(int $timeLimit): self {
+    public function setTimeLimit(int $timeLimit): self
+    {
         $this->timeLimit = $timeLimit;
 
         return $this;
@@ -86,7 +88,8 @@ class Sandbox
      * @param int $memoryLimit
      * @return $this
      */
-    public function setMemoryLimit(int $memoryLimit): self {
+    public function setMemoryLimit(int $memoryLimit): self
+    {
         $this->memoryLimit = $memoryLimit;
 
         return $this;
@@ -97,7 +100,8 @@ class Sandbox
      * @return false|string
      * @throws Exception
      */
-    public function run(): bool|string {
+    public function run(): bool|string
+    {
         $sandboxProcess = new Process();
         $sandboxProcess->sandboxDirectory = $this->sandboxDirectory;
         $sandboxProcess->sandboxFilePath = $this->sandboxFilePath;

@@ -13,7 +13,8 @@ class Directory
      * @return string The generated sandbox directory path.
      * @throws RandomException
      */
-    public static function generateSandboxDirectory() : string {
+    public static function generateSandboxDirectory(): string
+    {
         return sys_get_temp_dir() . '/php_sandbox/' . Generator::uniqHash();
     }
 

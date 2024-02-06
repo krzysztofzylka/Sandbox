@@ -42,7 +42,8 @@ class Process
      * @return resource
      * @throws Exception
      */
-    public function createProcess() {
+    public function createProcess()
+    {
         $process = proc_open(
             'php ' . escapeshellarg($this->sandboxFilePath),
             [
